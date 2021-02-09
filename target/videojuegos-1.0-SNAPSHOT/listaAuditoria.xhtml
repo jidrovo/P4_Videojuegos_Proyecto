@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <h:head>
+        <title>Lista</title>
+    </h:head>
+    <h:body>
+
+        <p:breadCrumb>
+
+            <p:menuitem value="" url="menuAdministrador.xhtml" />
+             <p:menuitem value="Cambiar clave" url="cambiarClave.xhtml" />
+            
+             <p:menuitem value="Bloqueo de usuarios" url="bloqueoDeUsuarios.xhtml" />
+             <p:menuitem value="Mostrar usuarios" url="listarAdministradores.xhtml" />
+             <p:menuitem value="Registrar nuevo administrador" url="registroAdministrador.xhtml" />
+
+        </p:breadCrumb>
+
+
+
+
+
+
+        <p:accordionPanel>
+
+            <p:tab title="Auditoría">
+                <h:form>
+                    
+                    <p:dataTable value="#{listarAuditoriaController.lista}" var="audi">
+                        <p:column headerText="Tabla" filterBy="#{audi.tabla_aud}" filterMatchMode="contains">
+                            <h:outputText value="#{audi.tabla_aud}"/>
+                        </p:column>
+
+                        <p:column headerText="Operación" filterBy="#{audi.operacion_aud}" filterMatchMode="contains">
+                            <h:outputText value="#{audi.operacion_aud}"/>
+                        </p:column>
+
+                        <p:column headerText="Valor anterior" filterBy="#{audi.valoranterior_aud}" filterMatchMode="exact">
+                            <h:outputText value="#{audi.valoranterior_aud}"/>
+                        </p:column>
+
+                        <p:column headerText="Valor nuevo" filterBy="#{audi.valornuevo_aud}" filterMatchMode="contains">
+                            <h:outputText value="#{audi.valornuevo_aud}"/>
+                        </p:column>
+                        
+                        <p:column headerText="Fecha" filterBy="#{audi.fecha_aud}" filterMatchMode="contains">
+                            <h:outputText value="#{audi.fecha_aud}"/>
+                        </p:column>
+
+                    </p:dataTable>
+                </h:form>
+            </p:tab>
+
+        </p:accordionPanel>
+
+    </h:body>
+
+</html>

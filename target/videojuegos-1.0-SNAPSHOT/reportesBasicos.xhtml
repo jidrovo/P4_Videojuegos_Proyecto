@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    
+    
+    <h:head>
+	     <title>Reportes básicos</title>
+
+  </h:head>
+  
+  <h:body>
+ 
+ <h:form>
+     <h:form>
+          <p:breadCrumb>
+             <p:menuitem value="Categories" url="index.xhtml" />
+             <p:menuitem value="Información básica" outcome="informacionBasica.xhtml" />
+             
+             <p:menuitem value="Quienes somos" outcome="quienesSomos.xhtml" />
+             <p:menuitem value="Iniciar Sesión" outcome="iniciarSesion.xhtml" />
+             <p:menuitem value="Registrarse" outcome="registro.xhtml" />
+         </p:breadCrumb>
+                  </h:form>
+ 
+ <p:panel>
+ <f:facet name="header">
+	  <p:outputLabel value="Reportes básicos"></p:outputLabel>
+	  </f:facet>
+     
+    
+	  
+     <h:panelGrid columns="1" cellpadding="10">
+            
+            <h:outputText
+                value="Página encargada de recopilar datos históricos, y mostrarlos por medio de gráficos estadísticos. Los datos son recopilaciones históricas que se almacenaron en un data ware house y se mantuvieron y actualizaron a lo largo de los años. Estos datos nos sirven para hacer un visualización concreta y exacta de los diferentes balances por medio de gráficos estadísticos mostrándonos información precisa y concreta. 
+La página brinda un soporte coherente y estable, brindando un servicio de calidad y calidez con personas interesadas en el mundo de los videojuegos y sus contribuciones a lo largo del tiempo." />
+        <p:separator/>
+            <h:outputLabel value="En este caso tenemos los videojuegos que más éxito han tenido, en relación a su número de ventas alcanzadas, los datos con los que se ha analizado este caso son tomados desde 1980 a 2016."/>
+        <p:chart type="bar" model="#{barChart.barModel}" style="height: 300px; width: 1299px;"  />
+                      <p:separator/>
+
+                        <h:outputLabel value="En este otro caso tenemos las plataformas de videojuegos más exitosas, es decir, la que mayores ventas han tenido, este análisis se dio con datos recolectados desde 1980 a 2016."/>
+           
+            <p:chart type="bar" model="#{barChart.barModel2}" style="height: 300px; width: 1200px;"  />
+        
+        </h:panelGrid> 
+</p:panel>
+	  
+</h:form>	
+      
+     
+	  </h:body>
+    
+    
+</html>
