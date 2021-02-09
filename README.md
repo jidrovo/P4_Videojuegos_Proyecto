@@ -9,4 +9,4 @@
 <p>Este proyecto está bajo la Licencia Apache 2.0 - mira el archivo [https://www.apache.org/licenses/LICENSE-2.0] para detalles.</p>
 
 <h1>Expresiones de Gratitud 🎁</h1>
-<p>El agradecieminto de este proyecto va dirigido primero a Dios, también para nuestros tres docentes Ing. Patsy Prieto, Ing. Rodrigo Tufiño, Ing Ricardo Albarracín que gracias a sus conocimientos se pudo concluir con éxito, a nuestros familiares y demás personas que estuvieron apoyandonos durante este proceso; y en especial a mi grupo que trabajo duro con cada una de sus tareas.</p>
+<p>El agradecieminto de este proyecto va dirigido primero a Dios, también para nuestros tres docentes Ing. Patsy Prieto, Ing. Gustavo Navas, Ing Ricardo Albarracín que gracias a sus conocimientos se pudo concluir con éxito, a nuestros familiares y demás personas que estuvieron apoyandonos durante este proceso; y en especial a mi grupo que trabajo duro con cada una de sus tareas.</p>
