@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <h:head>
+      	<title>Inicio de Sesión</title>
+      	<link rel="stylesheet" href="../estilos/master.css" />
+      </h:head>
+      <h:body>
+      
+      <h:form>
+          <p:breadCrumb>
+             <p:menuitem value="Categories" url="index.xhtml" />
+             <p:menuitem value="Información básica" outcome="informacionBasica.xhtml" />
+             <p:menuitem value="Reportes básicos" outcome="reportesBasicos.xhtml" />
+             <p:menuitem value="Quienes somos" outcome="quienesSomos.xhtml" />
+             
+             <p:menuitem value="Registrarse" outcome="registro.xhtml" />
+         </p:breadCrumb>
+                  </h:form>
+      
+ <p:messages id="mensaje" severity="info, fatal, warn" showSummary="True" showDetail="True" />
+    <div class="login-box">
+      <img src="../imagenes/logoluigi.png" class="avatar" alt="Avatar Image"></img>
+      <h1>Registrese Aquí</h1>
+      
+      <h:form>
+        <!-- USERNAME INPUT -->
+        <p:outputLabel for="txtUsuario" value="Usuario"></p:outputLabel>
+					<h:inputText id="txtUsuario" required="true"
+						value="#{loginController.usuario.correo}"
+						requiredMessage="Digite su correo electronico"
+						validatorMessage="Tiene que ser un correo electrónico">
+						<f:validateRegex
+							pattern="[\w\.-]*[a-zA-Z0-9_]@[\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]" />
+						<p:ajax update="txtCorreoMsg" event="keyup" />
+					</h:inputText>
+					<p:message id="txtCorreoMsg" for="txtUsuario" />
+				
+        <!-- PASSWORD INPUT -->
+        <p:outputLabel for="txtClave" value="Clave"></p:outputLabel>
+					<h:inputSecret id="txtClave" required="true"
+						value="#{loginController.usuario.clave}"
+						requiredMessage="Digite su clave">
+						<p:ajax update="txtClaveMsg" event="keyup" />
+					</h:inputSecret>
+					<p:message id="txtClaveMsg" for="txtClave" />
+            <br />
+            <br />
+
+
+			<h:commandButton value="Iniciar Sesión"
+				action="#{loginController.iniciarSesion()}" />
+			<p:link value="Registrarse" outcome="registro.xhtml"></p:link>
+
+		</h:form>
+    </div>
+  </h:body>
+    
+</html>
