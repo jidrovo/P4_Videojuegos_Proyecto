@@ -95,7 +95,7 @@ public class CambioClaveController implements Serializable{
             
                    FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Aviso", "Su clave se ha actualizado correctamente."));
                 }else{
-                    FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_WARN, "Aviso", "La clave nueva con su repetición no coincide. "));
+                    FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_WARN, "Aviso", "La clave nueva con su repetición no coincide. Vuelva a intentarlo"));
                 }
             }else{
                 FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_WARN, "Aviso", "Su clave actual es incorrecta. "));
